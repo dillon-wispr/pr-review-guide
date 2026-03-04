@@ -1,6 +1,6 @@
 # PR Review Guide
 
-Static site rendering dillon-wispr's PR review style guide with syntax-highlighted examples. Live at **https://pr-review-guide.vercel.app**.
+Static site rendering dillon-wispr's PR review style guide with syntax-highlighted examples. Live at **https://dillons-pr-review.vercel.app**.
 
 ## Content
 
