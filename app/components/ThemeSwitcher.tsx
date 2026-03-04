@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react'
 
 const themes = [
-  { id: 'dracula',     label: 'Dracula',     color: '#bd93f9' },
-  { id: 'tokyo-night', label: 'Tokyo Night', color: '#7dcfff' },
-  { id: 'nord',        label: 'Nord',        color: '#88c0d0' },
-  { id: 'catppuccin',  label: 'Catppuccin',  color: '#cba6f7' },
+  { id: 'dracula',   label: 'Dracula',        color: '#bd93f9' },
+  { id: 'solarized', label: 'Solarized Dark',  color: '#268bd2' },
+  { id: 'nord',      label: 'Nord',            color: '#88c0d0' },
+  { id: 'monokai',   label: 'Monokai',         color: '#a6e22e' },
 ]
 
 export function ThemeSwitcher() {

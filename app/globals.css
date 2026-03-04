@@ -1,41 +1,51 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* --- Themes --- */
-:root {
-  --page-bg: #1a1b26;
-  --link-color: #bd93f9;
-  --code-border: #44475a;
+/* --- Page backgrounds per theme --- */
+:root                         { --page-bg: #1a1b26; --code-border: #44475a; }
+[data-theme="solarized"]      { --page-bg: #002b36; --code-border: #073642; }
+[data-theme="nord"]           { --page-bg: #2e3440; --code-border: #4c566a; }
+[data-theme="monokai"]        { --page-bg: #1a1a17; --code-border: #49483e; }
+
+body { background-color: var(--page-bg); }
+
+/* --- Syntax highlighting: default = dracula --- */
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-dracula);
+}
+pre[data-theme*=" "] {
+  background-color: var(--shiki-dracula-bg) !important;
 }
 
-[data-theme="tokyo-night"] {
-  --page-bg: #1a1b2e;
-  --link-color: #7dcfff;
-  --code-border: #2f3549;
+/* Solarized Dark */
+html[data-theme="solarized"] code[data-theme*=" "],
+html[data-theme="solarized"] code[data-theme*=" "] span {
+  color: var(--shiki-solarized);
+}
+html[data-theme="solarized"] pre[data-theme*=" "] {
+  background-color: var(--shiki-solarized-bg) !important;
 }
 
-[data-theme="nord"] {
-  --page-bg: #2e3440;
-  --link-color: #88c0d0;
-  --code-border: #4c566a;
+/* Nord */
+html[data-theme="nord"] code[data-theme*=" "],
+html[data-theme="nord"] code[data-theme*=" "] span {
+  color: var(--shiki-nord);
+}
+html[data-theme="nord"] pre[data-theme*=" "] {
+  background-color: var(--shiki-nord-bg) !important;
 }
 
-[data-theme="catppuccin"] {
-  --page-bg: #1e1e2e;
-  --link-color: #cba6f7;
-  --code-border: #313244;
+/* Monokai */
+html[data-theme="monokai"] code[data-theme*=" "],
+html[data-theme="monokai"] code[data-theme*=" "] span {
+  color: var(--shiki-monokai);
+}
+html[data-theme="monokai"] pre[data-theme*=" "] {
+  background-color: var(--shiki-monokai-bg) !important;
 }
 
-/* Apply theme */
-body {
-  background-color: var(--page-bg);
-}
-
-.prose a {
-  color: var(--link-color);
-}
-
-/* Code blocks: stand out from the page background */
+/* --- Code block chrome --- */
 pre[data-theme] {
   border: 1px solid var(--code-border) !important;
   border-radius: 0.5rem !important;

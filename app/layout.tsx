@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen">
         <ThemeSwitcher />
         <main className="prose prose-invert prose-pre:p-0 max-w-3xl mx-auto px-6 py-16">
