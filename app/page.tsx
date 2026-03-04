@@ -4,6 +4,7 @@ import { join } from 'path'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
+import { H1, H2, H3, H4 } from './components/Headings'
 
 export default function Home() {
   const source = readFileSync(
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <MDXRemote
       source={source}
+      components={{ h1: H1, h2: H2, h3: H3, h4: H4 }}
       options={{
         mdxOptions: {
           remarkPlugins: [remarkGfm],

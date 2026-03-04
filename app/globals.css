@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+/* Code blocks: stand out from the page background */
+pre[data-theme] {
+  border: 1px solid #44475a !important;
+  border-radius: 0.5rem !important;
+  padding: 1rem 1.25rem !important;
+}

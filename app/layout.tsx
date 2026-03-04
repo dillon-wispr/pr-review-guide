@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#282a36] min-h-screen">
+      <body className="bg-[#1a1b26] min-h-screen">
         <main className="prose prose-invert prose-pre:p-0 max-w-3xl mx-auto px-6 py-16">
           {children}
         </main>
