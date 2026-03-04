@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Toaster } from 'sonner'
 import { ThemeSwitcher } from './components/ThemeSwitcher'
 import './globals.css'
 
@@ -20,7 +19,6 @@ export default function RootLayout({
         <main className="prose prose-invert prose-pre:p-0 max-w-3xl mx-auto px-6 py-16">
           {children}
         </main>
-        <Toaster theme="dark" />
       </body>
     </html>
   )
