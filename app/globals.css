@@ -1,9 +1,43 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* --- Themes --- */
+:root {
+  --page-bg: #1a1b26;
+  --link-color: #bd93f9;
+  --code-border: #44475a;
+}
+
+[data-theme="tokyo-night"] {
+  --page-bg: #1a1b2e;
+  --link-color: #7dcfff;
+  --code-border: #2f3549;
+}
+
+[data-theme="nord"] {
+  --page-bg: #2e3440;
+  --link-color: #88c0d0;
+  --code-border: #4c566a;
+}
+
+[data-theme="catppuccin"] {
+  --page-bg: #1e1e2e;
+  --link-color: #cba6f7;
+  --code-border: #313244;
+}
+
+/* Apply theme */
+body {
+  background-color: var(--page-bg);
+}
+
+.prose a {
+  color: var(--link-color);
+}
+
 /* Code blocks: stand out from the page background */
 pre[data-theme] {
-  border: 1px solid #44475a !important;
+  border: 1px solid var(--code-border) !important;
   border-radius: 0.5rem !important;
   padding: 1rem 1.25rem !important;
 }
