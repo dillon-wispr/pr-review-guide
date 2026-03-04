@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Toaster } from 'sonner'
+import { ThemeSwitcher } from './components/ThemeSwitcher'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -13,12 +13,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="bg-[#1a1b26] min-h-screen">
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen">
+        <ThemeSwitcher />
         <main className="prose prose-invert prose-pre:p-0 max-w-3xl mx-auto px-6 py-16">
           {children}
         </main>
-        <Toaster theme="dark" />
       </body>
     </html>
   )

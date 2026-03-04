@@ -21,7 +21,14 @@ export default function Home() {
           remarkPlugins: [remarkGfm],
           rehypePlugins: [
             rehypeSlug,
-            [rehypePrettyCode, { theme: 'dracula' }] as never,
+            [rehypePrettyCode, {
+              theme: {
+                dracula:   'dracula',
+                solarized: 'solarized-dark',
+                nord:      'nord',
+                monokai:   'monokai',
+              },
+            }] as never,
           ],
         },
       }}
