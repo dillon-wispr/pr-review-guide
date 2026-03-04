@@ -1,10 +1,12 @@
 'use client'
 
 import React from 'react'
+import { toast } from 'sonner'
 
 function copyAnchorLink(id: string) {
   const url = `${window.location.origin}${window.location.pathname}#${id}`
   navigator.clipboard.writeText(url)
+  toast('Link copied')
 }
 
 function makeHeading(Tag: 'h1' | 'h2' | 'h3' | 'h4') {
@@ -15,17 +17,19 @@ function makeHeading(Tag: 'h1' | 'h2' | 'h3' | 'h4') {
   }: React.HTMLAttributes<HTMLHeadingElement>) {
     if (!id) return <Tag {...props}>{children}</Tag>
     return (
-      <Tag id={id} className="group flex items-baseline gap-2" {...props}>
-        <a
-          href={`#${id}`}
-          onClick={() => copyAnchorLink(id)}
-          className="opacity-0 group-hover:opacity-100 text-neutral-500 hover:text-neutral-300 transition-opacity no-underline font-normal shrink-0"
+      <Tag
+        id={id}
+        className="group relative cursor-pointer"
+        onClick={() => copyAnchorLink(id)}
+        {...props}
+      >
+        <span
+          className="absolute -left-5 opacity-0 group-hover:opacity-100 text-neutral-500 transition-opacity select-none"
           aria-hidden
-          tabIndex={-1}
         >
           #
-        </a>
-        <span>{children}</span>
+        </span>
+        {children}
       </Tag>
     )
   }
