@@ -1,6 +1,8 @@
 # PR Review Guide
 
-Static site rendering dillon-wispr's PR review style guide with syntax-highlighted examples. Live at **https://dillons-pr-review.vercel.app**.
+> **Note:** This site is no longer published. The canonical version of the style guide now lives on [Notion](https://www.notion.so/34a2ebdc733481eb8e13fb3b19c54479).
+
+Static site rendering dillon-wispr's PR review style guide with syntax-highlighted examples. ~~Live at **https://dillons-pr-review.vercel.app**.~~
 
 ## Content
 
